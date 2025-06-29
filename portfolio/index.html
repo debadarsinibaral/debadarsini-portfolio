@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debadarsini</title>
+    <title>Debadarsini Baral</title>
 
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
@@ -19,19 +19,21 @@
 </head>
 <body data-theme="light">
     <!-- Header START -->
-    <header class="header-absolute">
-        <nav class="navbar navbar-expand border-0">
+    <header class="header-absolute sticky-top" id="new-class">
+        <nav class="navbar navbar-expand border-0 py-3">
             <div class="container d-block">
-                <div class="d-flex align-items-center d-none">
+                <div class="d-flex align-items-center">
                     <!-- Logo -->
-                    <a class="navbar-brand p-0" href="#">
-                        <img class="align-top brand-logo" src="images/logo.png" alt="logo">
-                        <!-- <h2 class="text-primary mb-0">Debadarsini</h2> -->
-                    </a>
+                    <div>
+                        <a class="navbar-brand ps-0 my-4" href="#">
+                            <img class="brand-logo" id="nav-logo" src="images/logo-light.png" alt="logo">
+                            <!-- <h2 class="text-primary mb-0">Debadarsini</h2> -->
+                        </a>
+                    </div>
 
                     <!-- Menu -->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto d-lg-flex d-none align-items-center text-nowrap">
+                        <ul class="navbar-nav mx-auto d-lg-flex d-none align-items-center text-nowrap">
                             <li class="nav-item">
                                 <a class="nav-link" href="#about">About</a>
                             </li>
@@ -39,7 +41,7 @@
                                 <a class="nav-link " href="#skills">Skills</a>
                             </li>
                             <li class="nav-item dropdown position-relative">
-                                <a class="nav-link " href="#exeperience">Exeperience</a>
+                                <a class="nav-link " href="#experience">Experience</a>
                             </li>
                             <!-- <li class="nav-item dropdown position-relative">
                                 <a class="nav-link " href="#Projects">Projects</a>
@@ -57,81 +59,26 @@
                             </li>
                         </ul> -->
                     </div>
-                </div>
-                <div class="d-flex">
-                    <!-- Logo -->
-                    <div class="w-25 align-self-md-center">
-                        <a class="navbar-brand px-0" href="#">
-                            <img class="align-top brand-logo"  id="nav-logo" src="images/logo-light.png" alt="logo">
-                        </a>
-                    </div>
-                    <!-- Menu -->
-                    <div class="w-75 pt-2 pb-3 border-bottom">
-                        <div class="collapse navbar-collapse">
-                            <div class="pt-1 d-md-block d-none">
-                                <h5 class="mb-0">About</h5>
+
+                    <div class="ms-auto d-flex">
+                        <!-- <a href="#" class="btn btn-outline-primary">Contact</a> -->
+                        <div class="theme-toggle-main-container text-white">
+                            <div class="theme-toggle-container">
+                                <button class="btn" id="themeToggle" data-theme="dark"></button>
                             </div>
-                            <div class="ms-auto d-flex loginSection">
-                                <!-- <a href="#" class="btn btn-outline-primary">Contact</a> -->
-                                <div class="theme-toggle-main-container text-white">
-                                    <div class="theme-toggle-container">
-                                        <button class="btn" id="themeToggle" data-theme="dark"></button>
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex sticky">
-                    <!-- Logo -->
-                    <div class="w-25 align-self-md-center" style="position: relative; left:7.3rem;">
-                        <div class="logo hide-logo">
-                            <h6 class="mb-0 fw-bold"><a href="#" class="hover-primary">About</a></h6>
-                        </div>
-                    </div>
-                    <!-- Menu -->
-                    <div class="w-75 d-md-block d-none">
-                        <div class="d-flex ">
-                            <ul class="navbar-nav mb-auto d-lg-flex text-nowrap">
-                                <li class="nav-item">
-                                    <div class="dropdown">
-                                        <a class="nav-link dropdown-toggle ps-0 ms-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Skills
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            <li><a class="dropdown-item hvr-underline" href="#">Frontend</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown position-relative">
-                                    <a class="nav-link pb-0" href="#experience">Experience</a>
-                                </li>
-                                <li class="nav-item dropdown position-relative">
-                                    <a class="nav-link pb-0" href="#education">Education</a>
-                                </li>
-                                <!-- <li class="nav-item dropdown position-relative">
-                                    <a class="nav-link pb-0" href="#">Projects</a>
-                                </li> -->
-                            </ul>                        
-                        </div>
+                        </div>  
                     </div>
 
-                    <hr class="my-0">
-                </div>
-
-                <hr class="d-md-none mb-0">
-                <!-- <div class="d-md-none d-flex py-2">
-                    <a href="#" class="fw-bold text-white">Products</a>
-                    <div class="ms-auto">
-                        <a class="text-white small" type="button" id="menuToggle">
-                            More <i class="bi bi-chevron-down list-icon" style="font-size:.65rem;"></i>
+                    <div class="ms-3 d-flex d-lg-none mt-1">
+                        <a class="h5 mb-0" type="button" id="menuToggle">
+                            <i class="bi bi-list"></i>
                         </a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </nav>
         <!-- Website Mobile Menu -->
-        <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-start d-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header px-4">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                     <a class="navbar-brand px-0 pt-0 position-relative me-auto pb-0 fs-inherit" href="home.html">
@@ -143,63 +90,83 @@
                 <div class="border-0 text-start">
                     <div class="border-bottom py-2 px-4">
                         <h6 class="border-0 pt-2">
-                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="home">
-                                Home
-                            </a>
-                        </h6>
-                    </div>
-                    <div class="border-bottom py-2 px-4">
-                        <h6 class="border-0 pt-2">
-                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="about">
+                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="#about">
                                 About Us
                             </a>
                         </h6>
                     </div>
                     <div class="border-bottom py-2 px-4">
                         <h6 class="border-0 pt-2">
-                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="services">
-                                Services
+                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="#skills">
+                                Skills
                             </a>
                         </h6>
                     </div>
                     <div class="border-bottom py-2 px-4">
                         <h6 class="border-0 pt-2">
-                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="team">
-                                Team
+                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="#experience">
+                                Experience
                             </a>
                         </h6>
                     </div>
                     <div class="border-bottom py-2 px-4">
                         <h6 class="border-0 pt-2">
-                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="blog">
-                                Blog
+                            <a class="px-0 text-decoration-none text-dark text-uppercase" href="#education">
+                                Education
                             </a>
                         </h6>
                     </div>
-                    <div class="border-bottom py-2 px-4">
+                    <!-- <div class="border-bottom py-2 px-4">
                         <h6 class="border-0 pt-2">
                             <a class="px-0 text-decoration-none text-dark text-uppercase" href="contact">
-                                Contact Us
+                                Contact
                             </a>
                         </h6>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-        </div> -->
+        </div>
+        <div class="nav-menu">
+            <div class="border-0 text-start">
+                <div class="nav-menu-list border-top">
+                    <a class="px-0 text-light" href="#about">
+                        About
+                    </a>
+                </div>
+                <div class="nav-menu-list border-top">
+                    <a class="px-0 text-light" href="#skills">
+                        Skills
+                    </a>
+                </div>
+                <div class="nav-menu-list border-top">
+                    <a class="px-0 text-light" href="#experience">
+                        Experience
+                    </a>
+                </div>
+                <div class="nav-menu-list border-top">
+                    <a class="px-0 text-light" href="#education">
+                        Education
+                    </a>
+                </div>
+                <!-- <div class="nav-menu-list border-top">
+                    <a class="btn btn-white w-100 my-3 py-2" href="#">
+                        Log In <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div> -->
+            </div>
+        </div>
     </header>
     <!-- Header END -->
     <main>
-        <section class="py-5">
+        <section class="py-5" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 h-100 align-self-center">
-                        <div>
-                            <h1 class="mb-3">Hi, I am <br> Debadarsini</h1>
-                            <h3 class="mb-3">I am a <b id="typed" class="text-secondary">Software Developer</b>|</h3>
-                            <p class="text-light mb-5">Software Developer with over 2 years of experience in designing and implementing  innovative software solutions. A strong team player with a quick learning ability and a passion for adapting to new technologies. Currently working as a Full Stack PHP Developer.</p>
+                    <div class="col-md-6 text-center text-md-start h-100 align-self-center mb-5 mb-md-0">
+                        <h1 class="mb-3">Hi, I am <br> Debadarsini</h1>
+                        <h3 class="mb-3">I am a <b id="typed" class="text-secondary">Software Developer</b>|</h3>
+                        <p class="text-light mb-5">Software Developer with over 2 years of experience in designing and implementing  innovative software solutions. A strong team player with a quick learning ability and a passion for adapting to new technologies. Currently working as a Full Stack PHP Developer.</p>
 
-                            <a href="#" class="btn btn-primary">Check Resume</a>
-                        </div>
+                        <a href="#" class="btn btn-primary">Check Resume</a>
                     </div>
                     <!-- <div class="col-md-6 h-100">
                         <img src="images/profile-photo.jpg" alt="Image" class="profile-img">
@@ -242,7 +209,7 @@
             </div>
         </section>
 
-        <section class="py-5" id="skill">
+        <section class="py-5" id="skills">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8 mx-auto h-100">
@@ -283,9 +250,11 @@
                             <div class="card-body p-4 text-center">
                                 <h5 class="pb-4">Others</h5>
                                 <div class="skill">
+                                    <div class="skillCard">Git</div>
+                                    <div class="skillCard">Github</div>
+                                    <div class="skillCard">SVN</div>
                                     <div class="skillCard">VS Code</div>
                                     <div class="skillCard">Canva</div>
-                                    <div class="skillCard">SVN</div>
                                 </div>
                             </div>
                         </div>
@@ -299,7 +268,7 @@
                 <div class="row">
                     <div class="col-12 col-md-8 mx-auto h-100">
                         <div class="text-center mb-5">
-                            <h2 class="mb-3">Exeperience</h2>
+                            <h2 class="mb-3">Experience</h2>
                             <p class="mb-3 text-light">Worked as a software developer on many projects at different companies.</p>
                         </div>
                     </div>
@@ -418,10 +387,10 @@
     </main>
 
     <footer>
-        <div class="mt-4 text-center border-top py-3">
-            <div>
+        <div class="text-center py-3">
+            <!-- <div>
                 <a href="#">Debadarsini</a>
-            </div>
+            </div> -->
             <small class="text-light">
                 Copyright &copy; 2025 Debadarsini
             </small>
